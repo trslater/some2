@@ -1,12 +1,15 @@
 import { GUI } from "dat.gui"
 import { makeWorld } from "./world.js"
 import { makeCube } from "./cube.js"
+import { makeAxes } from "./axes.js"
 
 const gui = new GUI()
 const world = makeWorld(document.body)
 const cube = makeCube()
+const axes = makeAxes(10)
 
 world.add(cube)
+world.add(axes)
 
 gui.add(cube.scale, "x").min(0.01).max(4)
 gui.add(cube.scale, "y").min(0.01).max(4)
