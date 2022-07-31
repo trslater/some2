@@ -29,12 +29,3 @@ Starting the Site
 ```
 mkdocs serve
 ```
-
-Visualization
--------------
-
-```
-cd viz/
-npm install
-npm run
-```
