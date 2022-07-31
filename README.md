@@ -1,5 +1,5 @@
-SoME2: Polynomial Interpolation
-===============================
+SoME2: Interpolation
+====================
 
 My entry to the Summer of Math Exposition 2.
 
