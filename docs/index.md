@@ -1,5 +1,5 @@
-Welcome to MkDocs
-=================
+Discovering Interpolation
+=========================
 
 What is Interpolation?
 ----------------------
