@@ -1,17 +1,25 @@
-# Welcome to MkDocs
+Welcome to MkDocs
+=================
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+What is Interpolation?
+----------------------
 
-## Commands
+Given the set of $n$ points:
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+$$P = \{(x_0, y_0), (x_1, y_1), (x_2, y_2), ..., (x_{n - 1}, y_{n - 1})\}$$
 
-## Project layout
+We want to find a function $f: \mathbb{R} \to \mathbb{R}$, such that $f(x) = y$ for all $(x, y) \in P$.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+With such a function, we can no interpolate the **values in-between** the $x$'s.
+
+For example, what if we were given the points $(1, 2)$, $(3, 4)$, and $(5, 6)$?
+
+The equation $y = x + 1$ passes through all these points. We can test manually:
+
+$$\begin{align*}
+    2 &= 1 + 1 \\
+    4 &= 3 + 1 \\
+    6 &= 5 + 1
+\end{align*}$$
+
+What's even more powerful, though, is that we can now get the values in-between.
