@@ -3,12 +3,19 @@ import { GridHelper, Group, MeshBasicMaterial, Mesh, ShapeGeometry } from "three
 const makeAxes = size => {
     const axes = new Group()
 
-    const xyGrid = new GridHelper(size, size)
-    const xzGrid = new GridHelper(size, size)
-    const yzGrid = new GridHelper(size, size)
+    const xyGrid = new GridHelper(size, size, 0x000000, 0x000000)
+    const xzGrid = new GridHelper(size, size, 0x000000, 0x000000)
+    const yzGrid = new GridHelper(size, size, 0x000000, 0x000000)
 
     // const xLabels = [...Array(1).keys()].map(async i => {
     // })
+
+    xyGrid.material.transparent = true
+    xyGrid.material.opacity = 0.25
+    xzGrid.material.transparent = true
+    xzGrid.material.opacity = 0.25
+    yzGrid.material.transparent = true
+    yzGrid.material.opacity = 0.25
 
     xyGrid.rotation.x += Math.PI/2
     xyGrid.position.z -= size/2
