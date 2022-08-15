@@ -4,7 +4,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js"
 const lightDistance = 10
 const fov = 45
 const physicallyCorrectLights = true
-const initCameraDistance = 10
+const initCameraDistance = 15
 
 const makeWorld = (root) => {
     const scene = new Scene()
@@ -19,7 +19,7 @@ const makeWorld = (root) => {
 
     light.position.set(8, 10, 5)
     
-    camera.position.z = initCameraDistance
+    camera.position.set(initCameraDistance, initCameraDistance, initCameraDistance)
     
     renderer.physicallyCorrectLights = physicallyCorrectLights
     
