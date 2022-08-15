@@ -1,6 +1,6 @@
 import { GridHelper, Group } from "three";
 
-const makeAxes = size => {
+const make2DAxes = size => {
     const axes = new Group()
 
     const grid = new GridHelper(size, size, 0, 0)
@@ -16,4 +16,4 @@ const makeAxes = size => {
     return axes
 }
 
-export { makeAxes }
+export { make2DAxes }

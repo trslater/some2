@@ -1,6 +1,6 @@
 import { GridHelper, Group, MeshBasicMaterial, Mesh, ShapeGeometry } from "three";
 
-const makeAxes = size => {
+const make3DAxes = size => {
     const axes = new Group()
 
     const xyGrid = new GridHelper(size, size, 0x000000, 0x000000)
@@ -37,4 +37,4 @@ const makeAxes = size => {
     return axes
 }
 
-export { makeAxes }
+export { make3DAxes }
