@@ -1,9 +1,10 @@
 import { Scene, WebGLRenderer } from 'three'
 
 
-const makeEnvironment = viewport => {
+const makeEnvironment = view => {
     const scene = new Scene()
     const renderer = new WebGLRenderer({
+        canvas: view.canvas,
         antialias: true,
         alpha: true
     })
@@ -12,19 +13,19 @@ const makeEnvironment = viewport => {
         scene.add(obj)
     }
 
-    const start = (width, height) => {
-        resize(width, height)
-        viewport.appendChild(renderer.domElement)
+    const start = () => {
+        resize()
         animate()
     }
 
     const animate = () => {
-        controls.update()
+        view.update()
         requestAnimationFrame(animate)
-        renderer.render(scene, camera)
+        renderer.render(scene, view.camera)
     }
     
-    const resize = (width, height) => {
+    const resize = () => {
+        const [width, height] = view.resize()
         renderer.setSize(width, height)
     }
     
